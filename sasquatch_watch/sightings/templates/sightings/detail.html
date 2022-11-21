@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Details{% endblock %}
+
+{% block content %}
+<h1>{{sighting.title}}</h1>
+<p>
+    This sighting took place on {{sighting.date}}, 
+    around {{sighting.start_time}} in the <strong>{{sighting.region}}</strong> region.
+</p>
+
+<a href="{% url 'welcome' %}">Home</a>
+
+{% endblock %}

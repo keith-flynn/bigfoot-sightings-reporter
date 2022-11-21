@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}New Sighting{% endblock %}
+
+{% block content %}
+<h1>Submit a new sighting</h1>
+<form method="post">
+    <table>
+        {{ form }}
+    </table>
+    {% csrf_token %}
+    <button type="submit">Submit</button
+</form>
+{% endblock %}

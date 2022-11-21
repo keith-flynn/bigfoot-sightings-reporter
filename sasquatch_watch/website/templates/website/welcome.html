@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Sasquatch Watch!</h1>
+    <p>Have you spotted a bigfoot, sasquatch, 
+        yeti, or skunk ape? You are not alone. 
+        Report sightings here so that we can search 
+        for patterns.
+    </p>
+
+    <h2>Sightings</h2>
+    <ul>
+        {% for sighting in sightings %}
+            <li>
+                <a href="{% url 'detail' sighting.id %}">
+                    {{ sighting.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+<a href="{% url 'regions' %}">See all regions</a>
+{% endblock %}

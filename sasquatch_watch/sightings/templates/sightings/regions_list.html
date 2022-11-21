@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Regions{% endblock %}
+
+{% block content %}
+    <h2>Regions</h2>
+    <ul>
+      {% for region in regions %}
+        <li>
+          {{region}}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <a href="{% url 'welcome' %}">Home</a>
+
+{% endblock %}
